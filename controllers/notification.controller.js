@@ -14,7 +14,7 @@ const notifdicationObj = {
     subject: req.body.subject,
     content: req.body.content,
     requester: req.body.requester,
-    reciepientEmails: req.body.reciepientEmails
+    reciepientEmails: req.body.recepientEmails
 }
 
 try{
@@ -22,7 +22,11 @@ const notificationCreated = await Notification2.create(notifdicationObj);
 
 res.status(201).send({
     requestId: notificationCreated._id,
-    status: "Accept Request - it is in-Progress"
+    status: "Accept Request - it is in-Progress",
+    // requester: notificationCreated.requester,
+    // subject: notificationCreated.subject,
+    // recepientEmails: notificationCreated.recepientEmails
+    
 })
 
 } catch (err){

@@ -21,6 +21,7 @@ mongoose.connect(dbConfig.DB_URL, () => {
 
 // stitching the routes  
 require('./routes/notification.route')(app);
+require('./crons/cron');
 
 //  started the server
 app.listen(serverConfig.PORT, () => {

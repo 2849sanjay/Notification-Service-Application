@@ -17,7 +17,7 @@ const notification2Schema = new mongoose.Schema({
 type: String,
 required: true
     },
-    reciepientEmails: {
+    recepientEmails: {
         type: [String],
         required: true
     },
